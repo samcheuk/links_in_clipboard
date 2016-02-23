@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Link in Clipboard",
+  "short_name": "LinkInClipboard",
+  "description": "Open the links with your COPY",
+  "version": "1.0",
+  "minimum_chrome_version": "38",
+  "permissions": ["tabs", "clipboardRead"],
+  "browser_action": {"default_popup": "index.html", "default_icon": "assets/links_in_cell_128.png"},
+  "icons": {
+    "16": "assets/links_in_cell_16.png",
+    "128": "assets/links_in_cell_128.png"
+  }
+}
