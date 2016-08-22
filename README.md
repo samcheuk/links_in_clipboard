@@ -11,15 +11,9 @@ More easy when you meet this case in Google Spreadsheet:
 
 ###How to install
 
-1. Download .crx file: <https://db.tt/6HfN1ivf>
+Chrome extension store:
 
-2. Open [chrome://extensions/](chrome://extensions/) in Chrome browser 
-
-   (or Setting -> More Tools -> Extensions)
-3. Drag the .crx file into browser
-
-4. Click "Add extension"
-
+<https://chrome.google.com/webstore/detail/link-in-clipboard/bongldmnpckncminjehcpmocbcdfinnb>
 
 ###How to use
 
