@@ -7,6 +7,7 @@
   "minimum_chrome_version": "38",
   "permissions": ["tabs", "clipboardRead"],
   "browser_action": {"default_popup": "index.html", "default_icon": "assets/links_in_cell_128.png"},
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "icons": {
     "16": "assets/links_in_cell_16.png",
     "128": "assets/links_in_cell_128.png"
