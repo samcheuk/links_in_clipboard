@@ -18,6 +18,11 @@ function openLinks() {
   }
 }
 
+function openLink(link) {
+  console.log(link);
+  chrome.tabs.create({url: link});
+}
+
 function getContentFromClipboard() {
     var result = "";
     var sandbox = document.getElementById("sandbox");
@@ -30,14 +35,14 @@ function getContentFromClipboard() {
     sandbox.value = '';
     sandbox.style.display = 'none';
     console.log(result);
-    
+
     //parsing result
     if (result !== "") {
       if (result.charAt(0) == "\"" && result.charAt(result.length-1) == "\"") {
         result = result.substring(1, result.length-1);
       }
     }
-    
+
     return result;
 }
 
@@ -45,21 +50,25 @@ function htmlConvert(text) {
   if (text === "") {
     return "Clipboard is empty :(";
   }
-  
+
   var links = text.split("http");
   if (links.length < 2) {
     return "Clipboard no link found :(";
   }
-  
+
   var html = "";
   for (var i = 1; i < links.length; i++) {
+    if (!links[i].includes("://")) {
+      continue;
+    }
     aLinks.push('http'+links[i]);
-    html += "<a href='http" + links[i] + "'>http" + links[i] + "</a><br>";
+    var displayString = links[i];
+    html += "<a class=\"btn\" href='http" + links[i] + "'>http" + displayString + "</a><br>";
   }
   html += "<p>";
-  
+
   hiddenOpenButton(false);
-  
+
   return html;
 }
 
@@ -68,5 +77,4 @@ window.onload = function() {
   document.getElementById('openLinks').onclick = openLinks;
   var result = htmlConvert(getContentFromClipboard());
   document.getElementById('links').innerHTML = result;
-  
 };
