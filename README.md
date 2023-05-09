@@ -1,13 +1,13 @@
 # Links in Clipboard
 
-![version icon](https://img.shields.io/badge/LinksInClipboard-v1.1-brightgreen.svg)
+![version icon](https://img.shields.io/badge/LinksInClipboard-v1.2.0-brightgreen.svg)
 
 Chrome extension for open the links with your COPY
 
 
 More easy when you meet this case in Google Spreadsheet:
 
-![use case image](./sosad.png)
+![use case image](assets/sosad.png)
 
 ### Install
 
