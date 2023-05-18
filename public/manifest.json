@@ -10,15 +10,11 @@
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_title": "Links_in_clipboard",
     "default_popup": "popup.html"
   },
   "permissions": [
-    "tabs", 
     "clipboardRead"
   ]
 }
